@@ -1,0 +1,16 @@
+body
+{
+	//background-color: #000000;
+	text-align: center;
+	margin: 0;
+	overflow: hidden;
+}
+#canvas
+{
+}
+#resources
+{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
