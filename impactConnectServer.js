@@ -1,9 +1,18 @@
 var io = require('socket.io').listen(1337);
 
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'me',
+  password : 'secret',
+});
+
+connection.connect();
+
 io.sockets.on('connection', function(socket) {
 
 	io.set('log level', 1);
-	
+
 	/**
 	 * starting
 	 * sending remoteId to client who is joining
@@ -13,15 +22,15 @@ io.sockets.on('connection', function(socket) {
 		socket.emit('setRemoteId', socket.id);
 		console.log("broadcast new player with remote id "+socket.id);
 		socket.broadcast.emit('join', {remoteId:socket.id});
-		
+
 		//send all existing clients to new
 		for(var i in io.sockets.sockets){
 			socket.emit('join', {remoteId: i});
 		}
-		
+
 	});
 
-	
+
 
 	/**
 	 * universal broadcasting method
@@ -37,7 +46,7 @@ io.sockets.on('connection', function(socket) {
 		io.sockets.emit('announced', data);
 	});
 
-	
+
 	/**
 	 * disconnecting
 	 */
@@ -46,8 +55,8 @@ io.sockets.on('connection', function(socket) {
 		socket.broadcast.emit('removed', {remoteId: socket.id});
 	});
 
-	
+
 });
 
 
-
+connection.end();
