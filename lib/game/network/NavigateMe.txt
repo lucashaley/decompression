@@ -1,0 +1,14 @@
+/poll
+	/poll/chat/"user_GUID"
+	/poll/midturn/"user_GUID"
+	/poll/fullturn/"user_GUID"
+	/poll/list/"user_GUID"
+/message
+	/message/text/"user_GUID"/"text_message"
+	/message/move/"user_GUID"/"encoded_move"
+/accounts
+	/accounts/register/"username"/"password"
+	/accounts/login/"username"/"password"
+/games
+	/games/create/"user_GUID"
+	/games/join/"user_GUID"
