@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"name":"decompression","subdomain":"decompression","scripts":{"start":"lib/game/network/index.js"},"dependencies":{"mysql":"2.0.0-alpha8"},"version":"0.0.6","engines":{"node":"0.8.x"},"env":{"npm_config_rebuild_bundle":false,"npm_config_production":true}}
-=======
-{"name":"decompression","subdomain":"decompression","scripts":{"start":"lib/game/network/index.js"},"dependencies":{"mysql":"2.0.0-alpha8"},"version":"0.0.7","engines":{"node":"0.8.x"},"env":{"npm_config_rebuild_bundle":false,"npm_config_production":true}}
->>>>>>> 5b3e2a9ac1f81c7c593a36db5628675ca6839d16
+{"name":"decompression","subdomain":"decompression","scripts":{"start":"lib/game/network/index.js"},"dependencies":{"mysql":"2.0.0-alpha8"},"version":"0.0.8","engines":{"node":"0.8.x"},"env":{"npm_config_rebuild_bundle":false,"npm_config_production":true}}
