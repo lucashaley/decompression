@@ -1,17 +1,49 @@
 body
 {
-	background-color: #000000;
+	background-color: #444;
 	text-align: center;
 	margin: 0;
 	overflow: hidden;
 }
 #canvas
 {
-	background-color: #000000;
+	background-color: #000;
 }
-#resources
+#chat
 {
 	position: absolute;
-	top: -9999px;
-	left: -9999px;
+	bottom: 0;
+	left: 0;
+	width: 480px;
+	height: 200px;
+	background-color: #222;
+	opacity: 0.4;
+}
+#chat:hover
+{
+	opacity: 0.8;
+}
+#chat p
+{
+	padding: 0;
+	margin: 0;
+	color: #FFF;
+	text-align: left;
+}
+#chatInner
+{
+	padding: 8px;
+	width: 464px;
+	height: 168px;
+	overflow-y: scroll;
+}
+#chatButton
+{
+	display: block;
+	height: 16px;
+	background-color: #F00;
+}
+#chatButton:hover
+{
+	cursor: pointer;
 }
