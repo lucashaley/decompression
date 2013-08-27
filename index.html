@@ -15,51 +15,16 @@
 	<script src="lib/webgl/glDraw.js" type="text/javascript"></script>
 
 	<script type="text/javascript" src="lib/game/chat.js"></script>
+	<script type="text/javascript" src="lib/game/wiki.js"></script>
 
 	<script type="text/javascript" src="lib/impact/impact.js"></script>
 	<script type="text/javascript" src="lib/game/main.js"></script>
 
-	<script type="text/javascript">
-		window.onresize = function()
-		{
-			var canvasWidth = $("canvas").width();
-			var canvasHeight = $("canvas").height();
-			var chatWidth = $('#chat').width();
-			var chatHeight = $('#chat').height();
-			//if (window.innerWidth < 1280) $('canvas').css('width', window.innerWidth + 'px').css('height', ((window.innerWidth / 1280) * 800) + 'px');
-			//if (window.innerHeight < 800) $('canvas').css('width', ((window.innerHeight / 800) * 1280) + 'px')$('canvas').css('height', window.innerHeight + 'px');
-			$(document).scrollLeft(Math.abs(window.innerWidth - canvasWidth) / 2);
-			$(document).scrollTop(Math.abs(window.innerHeight - canvasHeight) / 2);
-			$('canvas').css('margin-top', ((window.innerHeight - canvasHeight) / 2) + 'px');
-			//$('canvas').css('left', ((window.innerWidth - canvasWidth) / 2) + 'px');
-			$('#chat').css('top', (((window.innerHeight - canvasHeight) / 2) + (canvasHeight - chatHeight)) + 'px');
-			$('#chat').css('left', ((window.innerWidth - canvasWidth) / 2) + 'px');
-		}
-		var chatMinimized = false;
-		$(document).ready(function()
-		{
-			$('#chatButton').click(function()
-			{
-				if (chatMinimized)
-				{
-					$('#chat').css('height', '200px');
-					$('#chatInner').css('visibility', 'visible');
-					chatMinimized = false;
-				}
-				else
-				{
-					$('#chat').css('height', $('#chatButton').css('height'));
-					$('#chatInner').css('visibility', 'hidden');
-					chatMinimized = true;
-				}
-				window.onresize();
-			});
-			window.onresize();
-		});
-	</script>
+	<script type="text/javascript" src="lib/ready.js"></script>
 </head>
 <body>
 	<canvas id="canvas" width="1280" height="800"></canvas>
 	<div id="chat"><div id="chatButton"></div><div id="chatInner"></div></div>
+	<div id="wiki"><div id="wikiButton"></div><div id="wikiInner"><iframe src="" frameborder="0"></iframe></div></div>
 </body>
 </html>
