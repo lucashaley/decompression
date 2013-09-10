@@ -1,0 +1,5 @@
+attack animation: 1-15
+
+death animation: 16-45
+
+idle animation: 46-75
